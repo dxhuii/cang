@@ -1,18 +1,15 @@
 <template>
   <div>
-    <h1 text="3xl">
-      内容清单
-    </h1>
-    <div mt-4 text="base gray-500">
-      收集一些有用的内容
+    <div flex="~ col" items-center>
+      <h1 text="2xl">
+        藏 <sup text="base" bg-card border-base top--3 border rounded px1 text-3 tracking-0.5 style="">CANG.IM</sup>
+      </h1>
+      <div mt-4 text="base gray-500">
+        收集一些有用的内容
+      </div>
     </div>
     <h2 class="mt4 flex">
-      <span flex-1>项目目录</span>
-      <div class="ml2 cursor-pointer op-50 transition-opacity hover:op-100">
-        <a target="_blank" href="https://github.com/dxhuii">
-          <div class="i-ri-arrow-right-up-line m2" />
-        </a>
-      </div>
+      项目目录
     </h2>
     <div class="grid grid-cols-1 mt4 gap4 sm:grid-cols-2 md:sm:grid-cols-4">
       <a
