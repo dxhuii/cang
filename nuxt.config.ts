@@ -8,7 +8,7 @@ export default defineNuxtConfig({
     '@pinia/nuxt',
     '@nuxtjs/color-mode',
     '@vite-pwa/nuxt',
-    'nuxt-module-eslint-config',
+    'nuxt-module-eslint-config'
   ],
 
   experimental: {
@@ -16,7 +16,7 @@ export default defineNuxtConfig({
     // but missing on offline, disabling extraction it until fixed
     payloadExtraction: false,
     renderJsonPayloads: true,
-    typedPages: true,
+    typedPages: true
   },
 
   css: [
@@ -24,24 +24,24 @@ export default defineNuxtConfig({
     '~/styles/default-theme.css',
     '~/styles/vars.css',
     '~/styles/global.css',
-    '~/styles/scrollbars.css',
+    '~/styles/scrollbars.css'
   ],
 
   colorMode: {
-    classSuffix: '',
+    classSuffix: ''
   },
 
   nitro: {
     esbuild: {
       options: {
-        target: 'esnext',
-      },
+        target: 'esnext'
+      }
     },
     prerender: {
       crawlLinks: false,
       routes: ['/'],
-      ignore: ['/hi'],
-    },
+      ignore: ['/hi']
+    }
   },
 
   app: {
@@ -50,28 +50,28 @@ export default defineNuxtConfig({
       link: [
         { rel: 'icon', href: '/favicon.ico', sizes: 'any' },
         { rel: 'icon', type: 'image/svg+xml', href: '/nuxt.svg' },
-        { rel: 'apple-touch-icon', href: '/apple-touch-icon.png' },
+        { rel: 'apple-touch-icon', href: '/apple-touch-icon.png' }
       ],
       meta: [
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
         { name: 'description', content: appDescription },
-        { name: 'apple-mobile-web-app-status-bar-style', content: 'black-translucent' },
-      ],
-    },
+        { name: 'apple-mobile-web-app-status-bar-style', content: 'black-translucent' }
+      ]
+    }
   },
 
   pwa,
 
   devtools: {
-    enabled: true,
+    enabled: true
   },
 
   features: {
     // For UnoCSS
-    inlineStyles: false,
+    inlineStyles: false
   },
 
   eslintConfig: {
-    setup: false,
-  },
+    setup: false
+  }
 })

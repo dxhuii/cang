@@ -7,7 +7,7 @@ import {
   presetUno,
   presetWebFonts,
   transformerDirectives,
-  transformerVariantGroup,
+  transformerVariantGroup
 } from 'unocss'
 
 import { variantParentMatcher } from '@unocss/preset-mini/utils'
@@ -71,8 +71,8 @@ export default defineConfig({
       'flex-h-center': 'justify-center',
       'bg-hover-overflow': 'relative z-0 transition-colors duration-250 after-content-empty after:(absolute inset--4px bg-transparent rounded-full z--1 transition-colors duration-250) hover:after:(bg-active)',
 
-      'timeline-title-style': 'text-primary text-lg font-bold',
-    },
+      'timeline-title-style': 'text-primary text-lg font-bold'
+    }
   ],
   presets: [
     presetUno(),
@@ -82,51 +82,51 @@ export default defineConfig({
       extraProperties: {
         'color': 'inherit',
         // Avoid crushing of icons in crowded situations
-        'min-width': '1.2em',
-      },
+        'min-width': '1.2em'
+      }
     }),
     presetTypography(),
     presetWebFonts({
       provider: 'none',
       fonts: {
-        script: 'Homemade Apple',
-      },
-    }),
+        script: 'Homemade Apple'
+      }
+    })
   ],
   transformers: [
     transformerDirectives(),
-    transformerVariantGroup(),
+    transformerVariantGroup()
   ],
   theme: {
     colors: {
       primary: {
         DEFAULT: 'var(--c-primary)',
-        active: 'var(--c-primary-active)',
+        active: 'var(--c-primary-active)'
       },
       danger: {
         DEFAULT: 'var(--c-danger)',
-        active: 'var(--c-danger-active)',
-      },
-    },
+        active: 'var(--c-danger-active)'
+      }
+    }
   },
   variants: [
-    (matcher) => {
+    matcher => {
       if (!process.env.TAURI_PLATFORM || !matcher.startsWith('native:'))
         return matcher
       return {
         matcher: matcher.slice(7),
-        layer: 'native',
+        layer: 'native'
       }
     },
-    (matcher) => {
+    matcher => {
       if (process.env.TAURI_PLATFORM !== 'macos' || !matcher.startsWith('native-mac:'))
         return matcher
       return {
         matcher: matcher.slice(11),
-        layer: 'native-mac',
+        layer: 'native-mac'
       }
     },
-    variantParentMatcher('fullscreen', '@media (display-mode: fullscreen)'),
+    variantParentMatcher('fullscreen', '@media (display-mode: fullscreen)')
   ],
   rules: [
     // scrollbar-hide
@@ -135,6 +135,6 @@ export default defineConfig({
       res += `\n${res.replace('{scrollbar-width:none;}', '::-webkit-scrollbar{display: none;}')}`
       return res
     }],
-    ['box-shadow-outline', { 'box-shadow': '0 0 0 1px var(--c-primary)' }],
-  ],
+    ['box-shadow-outline', { 'box-shadow': '0 0 0 1px var(--c-primary)' }]
+  ]
 })
