@@ -93,8 +93,8 @@ async function paste() {
 }
 
 .box {
-  background: linear-gradient(0deg, #f4f7ff, #f4f7ff),
-    linear-gradient(94.84deg, #fff 3.78%, #fcfdff 9.75%, #e6eeff 102.09%),
+  background:
+    linear-gradient(0deg, #f4f7ff, #f4f7ff), linear-gradient(94.84deg, #fff 3.78%, #fcfdff 9.75%, #e6eeff 102.09%),
     linear-gradient(126.58deg, #fff -18.12%, hsla(0, 0%, 100%, 0) 26.77%);
 }
 
