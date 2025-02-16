@@ -1,75 +1,128 @@
+<script setup lang="ts">
+const list = [{
+  title: '备忘清单',
+  href: 'https://quickref.cms.im/',
+  icon: 'https://quickref.cms.im/icons/favicon.svg',
+  desc: '开发人员分享快速参考备忘清单',
+  target: '_blank'
+},
+{
+  title: 'JS框架对比',
+  href: 'https://component-party.cms.im/',
+  icon: 'i-twemoji:party-popper',
+  desc: 'JavaScript框架语法特性对比',
+  target: '_blank'
+},
+{
+  title: 'IT工具箱',
+  href: 'https://tools.cms.im/',
+  icon: 'i-twemoji:toolbox',
+  desc: '助力开发人员和 IT 工作者',
+  target: '_blank'
+},
+{
+  title: 'NPM下载统计',
+  href: 'https://npm-stat.link/',
+  icon: 'i-twemoji-chart-increasing',
+  desc: '查看使用包的各个版本的NPM下载统计',
+  target: '_blank'
+},
+{
+  title: 'RGB转十六进制',
+  href: '/rgb2hex',
+  icon: 'i-twemoji:currency-exchange',
+  desc: 'RGB颜色值与十六进制颜色码转换工具'
+},
+{
+  title: '批量删除微博博文',
+  href: 'https://github.com/dxhuii/delWeibo',
+  icon: 'i-twemoji-delivery-truck',
+  desc: '批量删除新浪微博的小工具',
+  target: '_blank'
+},
+{
+  title: 'Hello Nav!',
+  href: 'https://hello-nav.cms.im/',
+  icon: 'https://hello-nav.cms.im/favicon/favicon-192.png',
+  desc: '面向开发人员的导航',
+  target: '_blank'
+},
+{
+  title: '简繁转换',
+  href: '/simple2traditional',
+  icon: 'i-twemoji:cyclone',
+  desc: '在线繁体字转换工具'
+},
+{
+  title: 'GitHub 关注排行榜',
+  href: 'https://github-rank.cms.im/',
+  icon: 'https://github.githubassets.com/favicon.ico',
+  desc: 'GitHub 全球用户的关注排行榜',
+  target: '_blank'
+},
+{
+  title: '程序代码图片',
+  href: 'https://code-image.cms.im',
+  icon: 'https://code-image.cms.im/favicon.ico',
+  desc: '可以把程序代码生成图片的网站',
+  target: '_blank'
+},
+{
+  title: '智能的Webp、JPEG、PNG图片压缩工具',
+  href: 'https://tinypng.com/',
+  icon: 'https://tinypng.com/images/apple-touch-icon.png',
+  desc: '一次最多20张，文件最大5MB',
+  target: '_blank'
+},
+{
+  title: 'IconSax icon list',
+  href: 'https://iconsax-icon-list.cms.im/',
+  icon: 'https://iconsax.io/logo-vuesax.svg',
+  desc: 'IconSax 图标展示列表，支持搜索',
+  target: '_blank'
+},
+{
+  title: 'ArtPlayer在线播放器',
+  href: 'https://player.cms.im/',
+  icon: 'https://m3u8-player.com/favicon.ico',
+  desc: 'ArtPlayer在线播放器，支持hls、flv在线弹幕',
+  target: '_blank'
+}]
+</script>
+
 <template>
-  <div>
+  <div class="px-10 py-20">
     <div flex="~ col" items-center>
-      <h1 text="2xl">
-        藏 <sup text="base" bg-card border-base top--3 border rounded px1 text-3 tracking-0.5 style="">CANG.IM</sup>
+      <h1 text="7xl">
+        藏
       </h1>
-      <div mt-4 text="base gray-500">
-        收集一些有用的内容
+      <p>CANG.IM</p>
+      <div mt-2 text="base gray-500">
+        整理一些小工具
       </div>
     </div>
-    <h2 class="mt4 flex">
-      项目目录
+    <h2 class="mt-2 flex text-2xl font-bold">
+      目录
     </h2>
-    <div class="grid grid-cols-1 mt4 gap4 sm:grid-cols-2 md:sm:grid-cols-4">
-      <a
-        class="rounded-md bg-gray-100 px4 py3 decoration-none transition-colors dark:bg-gray-50/10 hover:bg-gray-200 dark:hover:bg-gray-50/20"
-        target="_blank" href="https://quickref.cms.im/"
-      >
-        <div class="h-full flex items-center justify-center">
-          <div flex-1>
-            <div font-medium leading-relaxed>备忘清单</div>
-            <div text-sm font-normal op-50>开发人员分享快速参考备忘清单</div>
-          </div>
-          <div ml-4 text-4xl op-75>
-            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" height="1em" width="1em">
-              <path d="m21.66 10.44-.98 4.18c-.84 3.61-2.5 5.07-5.62 4.77-.5-.04-1.04-.13-1.62-.27l-1.68-.4c-4.17-.99-5.46-3.05-4.48-7.23l.98-4.19c.2-.85.44-1.59.74-2.2 1.17-2.42 3.16-3.07 6.5-2.28l1.67.39c4.19.98 5.47 3.05 4.49 7.23Z" fill="#c9d1d9" />
-              <path d="M15.06 19.39c-.62.42-1.4.77-2.35 1.08l-1.58.52c-3.97 1.28-6.06.21-7.35-3.76L2.5 13.28c-1.28-3.97-.22-6.07 3.75-7.35l1.58-.52c.41-.13.8-.24 1.17-.31-.3.61-.54 1.35-.74 2.2l-.98 4.19c-.98 4.18.31 6.24 4.48 7.23l1.68.4c.58.14 1.12.23 1.62.27Zm2.43-8.88c-.06 0-.12-.01-.19-.02l-4.85-1.23a.75.75 0 0 1 .37-1.45l4.85 1.23a.748.748 0 0 1-.18 1.47Z" fill="#228e6c" />
-              <path d="M14.56 13.89c-.06 0-.12-.01-.19-.02l-2.91-.74a.75.75 0 0 1 .37-1.45l2.91.74c.4.1.64.51.54.91-.08.34-.38.56-.72.56Z" fill="#228e6c" />
-            </svg>
-          </div>
-        </div>
-      </a>
-      <a
-        class="rounded-md bg-gray-100 px4 py3 decoration-none transition-colors dark:bg-gray-50/10 hover:bg-gray-200 dark:hover:bg-gray-50/20"
-        target="_blank" href="https://github.com/dxhuii/delWeibo"
-      >
-        <div class="h-full flex items-center justify-center">
-          <div flex-1>
-            <div font-medium leading-relaxed>批量删除微博博文</div>
-            <div text-sm font-normal op-50>批量删除新浪微博的小工具</div>
-          </div>
-          <div ml-4 text-4xl op-75>
-            <div class="i-twemoji-delivery-truck" />
-          </div>
-        </div>
-      </a>
-      <a
-        class="rounded-md bg-gray-100 px4 py3 decoration-none transition-colors dark:bg-gray-50/10 hover:bg-gray-200 dark:hover:bg-gray-50/20"
-        target="_blank" href="https://npm-stat.link/"
-      >
-        <div class="h-full flex items-center justify-center">
-          <div flex-1>
-            <div font-medium leading-relaxed>NPM下载统计</div>
-            <div text-sm font-normal op-50>查看使用包的各个版本的NPM下载统计</div>
-          </div>
-          <div ml-4 text-4xl op-75>
-            <div class="i-twemoji-chart-increasing" />
-          </div>
-        </div>
-      </a>
+    <div class="grid grid-cols-1 mt-4 gap-4 sm:grid-cols-2 md:sm:grid-cols-4">
       <NuxtLink
-        class="rounded-md bg-gray-100 px4 py3 decoration-none transition-colors dark:bg-gray-50/10 hover:bg-gray-200 dark:hover:bg-gray-50/20"
-        to="/rgb2hex"
+        v-for="item in list" :key="item.href"
+        :to="item.href"
+        class="rounded-md bg-gray-100 px-4 py-3 decoration-none transition-colors dark:bg-gray-50/10 hover:bg-gray-200 dark:hover:bg-gray-50/20"
+        :target="item.target"
       >
         <div class="h-full flex items-center justify-center">
           <div flex-1>
             <div font-medium leading-relaxed>
-              RGB颜色值与十六进制颜色码转换工具
+              {{ item.title }}
+            </div>
+            <div text-sm font-normal op-50>
+              {{ item.desc }}
             </div>
           </div>
           <div ml-4 text-4xl op-75>
-            <div class="i-twemoji:currency-exchange" />
+            <img v-if="item.icon.includes('https')" w10 :src="item.icon" :alt="item.title">
+            <div v-else :class="item.icon" />
           </div>
         </div>
       </NuxtLink>
